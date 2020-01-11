@@ -6,10 +6,10 @@ using namespace std;
 int main(){
     ifstream markdown;
     //filename of your md
-    markdown.open("/home/yunlang/Desktop/C++复习.md");
+    markdown.open("filename1");
     ofstream toc;
     //filename of your toc
-    toc.open("/home/yunlang/Desktop/toc.txt");
+    toc.open("filename2");
     char word='\0';
     int count;
     count=0;
@@ -54,5 +54,12 @@ int main(){
      }
        if(word=='\n') count=0;
   }
+  markdown.close();
+markdown.open("filename1");
+while(markdown.get(word)){
+  toc<<word;
+}
+markdown.close();
+toc.close();
   return 0;
 }
