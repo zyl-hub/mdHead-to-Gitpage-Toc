@@ -55,11 +55,6 @@ int main(){
        if(word=='\n') count=0;
   }
   markdown.close();
-markdown.open("filename1");
-while(markdown.get(word)){
-  toc<<word;
-}
-markdown.close();
-toc.close();
+  toc.close();
   return 0;
 }
